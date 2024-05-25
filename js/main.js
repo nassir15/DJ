@@ -179,6 +179,27 @@
     selector: '.galelry-lightbox'
   });
 
+  document.getElementById('openPopup').onclick = function() {
+    document.getElementById('popup').style.display = 'block';
+};
+
+document.querySelector('.close').onclick = function() {
+    document.getElementById('popup').style.display = 'none';
+};
+
+window.onclick = function(event) {
+    if (event.target == document.getElementById('popup')) {
+        document.getElementById('popup').style.display = 'none';
+    }
+};
+
+document.getElementById('bookAppointment').onclick = function() {
+    alert('Redirecting to booking page...');
+    // Here you can add a link to your booking page
+    window.location.href = 'https://wa.me/qr/SBA46C3JH5X5P1';
+};
+
+
   /**
    * Testimonials slider
    */
